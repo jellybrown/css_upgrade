@@ -1,0 +1,67 @@
+$maincolor: #777777;
+$titlecolor: #222222;
+$mainfontsize : 18px;
+$titlefontsize: ($mainfontsize * 2);
+$baseUrl : 'http://www.abc.com'; //url 지정 가능 (사용법 -> @{baseUrl} )
+
+@mixin titleborder {
+    border-left: 7px solid tomato;
+    padding-left: 20px;
+}
+
+@mixin rounded($radius: 10px) {
+    //매개변수로 지정 가능
+    border-radius: $radius;
+}
+
+body {
+    color: $maincolor;
+    font-size: $mainfontsize;
+    background-image: url('${baseUrl}/images/body_bg.jpg');
+}
+
+h1 a {
+    color: $titlecolor;
+    text-decoration: none;
+    font-size: $titlefontsize;
+}
+
+nav>h1,
+#wrap>section>h1 {
+    @include titleborder;
+}
+
+#content>h1 {
+    background-color: silver;
+    padding: 10px;
+    @include rounded;
+}
+
+aside>h1 {
+    background-color: silver;
+    padding: 10px;
+    @include rounded(20px);
+}
+
+header {
+    //계층구조로 작성 가능
+    color: #000;
+
+    nav {
+        ul {
+            list-style: none;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    font-weight: bold;
+
+                    &:hover {
+                        color: #888;
+                    }
+                }
+            }
+        }
+    }
+}

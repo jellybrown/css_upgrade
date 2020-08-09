@@ -1,0 +1,46 @@
+body {
+  color: #777777;
+  font-size: 18px;
+  background-image: url("${baseUrl}/images/body_bg.jpg");
+}
+
+h1 a {
+  color: #222222;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+nav > h1,
+#wrap > section > h1 {
+  border-left: 7px solid tomato;
+  padding-left: 20px;
+}
+
+#content > h1 {
+  background-color: silver;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+aside > h1 {
+  background-color: silver;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+header {
+  color: #000;
+}
+header nav ul {
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  color: #888;
+}
+
+/*# sourceMappingURL=main.css.map */
